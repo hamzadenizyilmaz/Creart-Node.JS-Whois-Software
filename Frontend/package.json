@@ -1,0 +1,35 @@
+{
+  "name": "creart-whois-frontend",
+  "version": "1.2.5-beta",
+  "description": "Professional WHOIS & DNS Lookup Frontend",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "axios": "^1.6.0",
+    "critters": "^0.0.21",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.292.0",
+    "next": "^14.2.33",
+    "postcss": "^8.4.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-loading-skeleton": "^3.3.1",
+    "tailwindcss": "^3.3.0"
+  },
+  "devDependencies": {
+    "eslint": "8.51.0",
+    "eslint-config-next": "14.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
