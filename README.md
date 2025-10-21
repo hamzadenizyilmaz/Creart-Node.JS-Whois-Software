@@ -2,111 +2,111 @@
 
 ![WHOIS Lookup](https://img.shields.io/badge/WHOIS-Lookup-blue)
 ![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)
-![Next.js](https://img.shields.io/badge/Next.js-13%2B-black)
+![Next.js](https://img.shields.io/badge/Next.js-14%2B-black)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Version](https://img.shields.io/badge/Version-1.2.5--beta-orange)
 
-**Creart-Whois** is a modern, full-featured WHOIS lookup platform designed for querying domains, IPv4, IPv6, ASN, and CIDR. Built with a cutting-edge tech stack including **Node.js**, **Next.js 14+**, **Tailwind CSS**, and **Framer Motion**, it offers a fast, secure, and extensible solution with a sleek, user-friendly interface. This is the **first beta release (v1.2.5-beta)**, and we’re excited to share it with the community! Whether you're a developer, network administrator, or cybersecurity enthusiast, Creart-Whois provides powerful tools to explore and analyze network data.
+**Creart-Whois** is a modern WHOIS lookup platform for querying domains, IPv4, IPv6, ASN, and CIDR. Powered by **Node.js 18+**, **Next.js 14+**, **Tailwind CSS**, and **Framer Motion**, it delivers a fast, secure, and extensible solution with a sleek, responsive interface. As the **first beta release (v1.2.5-beta)**, we’re excited to share this with the community and welcome feedback to shape its future!
 
 ## 🚀 Features
 
 ### 🔍 Query Capabilities
-- **Domain WHOIS**: Retrieve detailed domain information, including registrar details, creation/expiry dates, name servers, and ownership data.
-- **IPv4/IPv6 Lookup**: Access IP geolocation, ISP details, and security analysis for both IPv4 and IPv6 addresses.
-- **ASN (Autonomous System Number)**: Query network details for ASNs, including provider and routing information.
-- **CIDR Blocks**: Analyze IP ranges and subnets with robust CIDR parsing.
-- **DNS Records**: Comprehensive querying for all DNS record types (A, AAAA, MX, CNAME, TXT, etc.).
+- **Domain WHOIS**: Detailed registrar, ownership, and name server data.
+- **IPv4/IPv6 Lookup**: Geolocation, ISP, and security details.
+- **ASN Queries**: Autonomous System Number details, including provider and routing.
+- **CIDR Blocks**: Subnet and IP range analysis.
+- **DNS Records**: Support for A, AAAA, MX, CNAME, TXT, and more.
 
 ### 💻 Technical Highlights
-- **Modern Tech Stack**: Powered by **Node.js 18+** for the backend and **Next.js 14+** for the frontend, with **Tailwind CSS** for styling and **Framer Motion** for animations.
-- **Real-Time Queries**: Fast and reliable WHOIS and DNS lookups with optimized backend performance.
-- **Responsive Design**: Fully responsive UI for seamless use on mobile, tablet, and desktop devices.
-- **RESTful API**: Developer-friendly API with rate limiting, caching, and detailed documentation.
-- **Security First**: Equipped with **Helmet**, **CORS**, input validation (Joi), and XSS/SQL injection protection.
-- **Performance Optimized**: Server-side rendering (SSR), static site generation (SSG), Gzip/Brotli compression, and Redis/node-cache integration.
+- **Tech Stack**: Node.js (backend), Next.js 14+ (frontend), Tailwind CSS, Framer Motion.
+- **Real-Time Queries**: Optimized for speed with caching support.
+- **Responsive UI**: Mobile, tablet, and desktop compatibility.
+- **RESTful API**: Developer-friendly with rate limiting and caching.
+- **Security**: Helmet, CORS, Joi validation, XSS/SQL injection protection.
+- **Performance**: SSR/SSG, Gzip/Brotli compression, Redis/node-cache.
 
 ### 🎨 User Experience
-- **Modern UI/UX**: Glass-morphism design, gradient backgrounds, and smooth animations at 60 FPS.
-- **Dark/Light Mode**: Automatic theme switching based on user preferences.
-- **Smart Search**: Features autocomplete, query suggestions, and search history for quick lookups.
-- **Detailed Reports**: View results in formatted or raw data modes for flexibility.
-- **Accessibility**: Built with ARIA standards for inclusive access.
+- **Modern Design**: Glass-morphism, gradients, 60 FPS animations.
+- **Dark/Light Mode**: Auto-switching themes.
+- **Smart Search**: Autocomplete, suggestions, and history.
+- **Reports**: Formatted or raw data views.
+- **Accessibility**: ARIA-compliant for inclusivity.
 
 ## 📁 Project Structure
 
 ```
 Creart-Node.JS-Whois-Software/
 ├── 📁 backend/                          # Node.js API Server
-│   ├── 📁 config/                       # Configuration files
-│   │   └── constants.js                 # Application constants and settings
+│   ├── 📁 config/                       # Configuration
+│   │   └── constants.js                 # App constants
 │   ├── 📁 middleware/                   # Express middleware
-│   │   ├── validation.js                # Joi validation schemas
-│   │   ├── rateLimit.js                 # Rate limiting configuration
-│   │   ├── errorHandler.js              # Global error handling
-│   │   ├── cache.js                     # Redis/node-cache middleware
-│   │   └── asyncHandler.js              # Async/await error handler
+│   │   ├── validation.js                # Joi schemas
+│   │   ├── rateLimit.js                 # Rate limiting
+│   │   ├── errorHandler.js              # Error handling
+│   │   ├── cache.js                     # Redis/node-cache
+│   │   └── asyncHandler.js              # Async error handler
 │   ├── 📁 routes/                       # API routes
-│   │   ├── whois.js                     # WHOIS query endpoints
-│   │   ├── dns.js                       # DNS query endpoints
-│   │   └── health.js                    # Health check endpoints
-│   ├── 📁 utils/                        # Utility functions
-│   │   ├── whoisParser.js               # WHOIS data parser and analyzer
-│   │   ├── ipTools.js                   # IP address utilities
-│   │   ├── responseFormatter.js         # Standardized response formatting
-│   │   ├── database.js                  # Database connection utilities
+│   │   ├── whois.js                     # WHOIS endpoints
+│   │   ├── dns.js                       # DNS endpoints
+│   │   └── health.js                    # Health checks
+│   ├── 📁 utils/                        # Utilities
+│   │   ├── whoisParser.js               # WHOIS parser
+│   │   ├── ipTools.js                   # IP utilities
+│   │   ├── responseFormatter.js         # Response formatting
+│   │   ├── database.js                  # DB utilities
 │   │   └── cache.js                     # Cache management
-│   ├── package.json                     # Backend dependencies
-│   └── server.js                        # Main server file
-├── 📁 frontend/                         # Next.js React Application
+│   ├── package.json                     # Dependencies
+│   └── server.js                        # Main server
+├── 📁 frontend/                         # Next.js Application
 │   ├── 📁 components/                   # React components
 │   │   ├── 📁 Layout/                   # Layout components
-│   │   │   ├── Layout.js                # Main layout component
-│   │   │   ├── Header.js                # Navigation header
-│   │   │   └── Footer.js                # Site footer
+│   │   │   ├── Layout.js                # Main layout
+│   │   │   ├── Header.js                # Navigation
+│   │   │   └── Footer.js                # Footer
 │   │   ├── 📁 Search/                   # Search components
-│   │   │   ├── SearchForm.js            # Main search form
+│   │   │   ├── SearchForm.js            # Search form
 │   │   │   └── QueryTypes.js            # Query type selector
-│   │   ├── 📁 Results/                  # Result display components
-│   │   │   ├── ResultDisplay.js         # Main results view
-│   │   │   ├── DomainInfo.js            # Domain information display
-│   │   │   ├── IPInfo.js                # IP information display
+│   │   ├── 📁 Results/                  # Result components
+│   │   │   ├── ResultDisplay.js         # Results view
+│   │   │   ├── DomainInfo.js            # Domain display
+│   │   │   ├── IPInfo.js                # IP display
 │   │   │   └── RawData.js               # Raw data view
 │   │   └── 📁 UI/                       # UI components
-│   │       ├── Button.js                # Button components
+│   │       ├── Button.js                # Buttons
 │   │       ├── Loading.js               # Loading animations
-│   │       └── ErrorMessage.js          # Error message component
+│   │       └── ErrorMessage.js          # Error messages
 │   ├── 📁 pages/                        # Next.js pages
 │   │   ├── index.js                     # Homepage
-│   │   ├── _app.js                      # Next.js app wrapper
+│   │   ├── _app.js                      # App wrapper
 │   │   └── 📁 api/                      # API routes
-│   │       └── hello.js                 # Sample API route
-│   ├── 📁 styles/                       # Style files
-│   │   └── globals.css                  # Global CSS and Tailwind
+│   │       └── hello.js                 # Sample route
+│   ├── 📁 styles/                       # Styles
+│   │   └── globals.css                  # Global CSS & Tailwind
 │   ├── 📁 utils/                        # Frontend utilities
-│   │   ├── api.js                       # API call utilities
-│   │   └── formatters.js                # Data formatting utilities
+│   │   ├── api.js                       # API calls
+│   │   └── formatters.js                # Data formatters
 │   ├── public/                          # Static assets
-│   ├── next.config.js                   # Next.js configuration
-│   ├── tailwind.config.js               # Tailwind CSS configuration
-│   ├── postcss.config.js                # PostCSS configuration
-│   └── package.json                     # Frontend dependencies
+│   ├── next.config.js                   # Next.js config
+│   ├── tailwind.config.js               # Tailwind config
+│   ├── postcss.config.js                # PostCSS config
+│   └── package.json                     # Dependencies
 ├── 📁 docs/                             # Documentation
 ├── 📁 scripts/                          # Deployment scripts
 ├── LICENSE                              # MIT License
 └── README.md                            # This file
 ```
 
-## 🛠️ Installation and Setup
+## 🛠️ Installation
 
 ### Prerequisites
-- **Node.js**: 18.0 or higher
-- **npm**: 9.0 or higher
-- **Git**: For cloning the repository
-- Optional: **Docker** for containerized deployment, **Redis** for caching, **MongoDB** for database (if enabled)
+- **Node.js**: 18.0+
+- **npm**: 9.0+
+- **Git**
+- Optional: **Docker**, **Redis**, **MongoDB**
 
-### 🏃‍♂️ Quick Start (Local Development)
+### 🏃‍♂️ Local Setup
 
-1. **Clone the Repository**:
+1. **Clone Repository**:
    ```bash
    git clone https://github.com/hamzadenizyilmaz/Creart-Node.JS-Whois-Software.git
    cd Creart-Node.JS-Whois-Software
@@ -118,19 +118,14 @@ Creart-Node.JS-Whois-Software/
    npm install
    cp .env.example .env
    ```
-   Edit `.env` with your configuration:
+   Edit `.env`:
    ```env
-# Server Configuration
-NODE_ENV=development
-PORT=3001
-FRONTEND_URL=http://localhost:3000
-
-# Database
-MONGODB_URI=mongodb+srv://test:test@test.mongodb.net/
-
-# Rate Limiting
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX_REQUESTS=100
+   NODE_ENV=development
+   PORT=3001
+   FRONTEND_URL=http://localhost:3000
+   MONGODB_URI=mongodb+srv://test:test@test.mongodb.net/
+   RATE_LIMIT_WINDOW_MS=900000
+   RATE_LIMIT_MAX_REQUESTS=100
    ```
 
 3. **Frontend Setup**:
@@ -139,56 +134,50 @@ RATE_LIMIT_MAX_REQUESTS=100
    npm install
    ```
 
-4. **Run the Application**:
-   - **Backend** (in one terminal):
+4. **Run Application**:
+   - **Backend**:
      ```bash
      cd backend
-     npm run start
+     npm start
      ```
-     Expected output:
+     Output:
      ```
      WHOIS API Server Started!
-     Port: 5000
+     Port: 3001
      Environment: development
-     API URL: http://localhost:5000/api/v1
-     Health Check: http://localhost:5000/health
+     API URL: http://localhost:3001/api/v1
+     Health Check: http://localhost:3001/health
      ```
-   - **Frontend** (in another terminal):
+   - **Frontend**:
      ```bash
      cd frontend
      npm run dev
      ```
-     Expected output:
+     Output:
      ```
      ▲ Next.js 14.2.33
-     - Local: http://localhost:3000
+     Local: http://localhost:3000
      ```
 
-5. **Test in Browser**:
+5. **Test**:
    - Frontend: `http://localhost:3000`
-   - Backend API: `http://localhost:5000/api/v1`
-   - Health Check: `http://localhost:5000/health`
+   - API: `http://localhost:3001/api/v1`
+   - Health Check: `http://localhost:3001/health`
 
 ### 🌐 Production Deployment
 
-#### 1. Environment Setup
-Update environment files for production:
+#### Environment
 - **Backend `.env`**:
   ```env
-# Server Configuration
-NODE_ENV=development
-PORT=3001
-FRONTEND_URL=http://localhost:3000
-
-# Database
-MONGODB_URI=mongodb+srv://test:test@test.mongodb.net/
-
-# Rate Limiting
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX_REQUESTS=100
+  NODE_ENV=production
+  PORT=3001
+  FRONTEND_URL=https://yourdomain.com
+  MONGODB_URI=mongodb+srv://test:test@test.mongodb.net/
+  RATE_LIMIT_WINDOW_MS=900000
+  RATE_LIMIT_MAX_REQUESTS=100
   ```
 
-#### 2. Build Process
+#### Build
 - **Backend**:
   ```bash
   cd backend
@@ -200,54 +189,37 @@ RATE_LIMIT_MAX_REQUESTS=100
   cd frontend
   npm run build
   npm start
-  # Or for static export:
+  # Or static export:
   npm run build && npm run export
   ```
 
-#### 3. Deployment Options
+#### Deployment Options
 
-##### A) VPS/Cloud Server (Ubuntu 20.04+)
+##### A) VPS (Ubuntu 20.04+)
 ```bash
-# Connect to server
 ssh user@your-server-ip
-
-# Update system
 sudo apt update && sudo apt upgrade -y
-
-# Install Node.js
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
-
-# Install Nginx
 sudo apt install nginx -y
-
-# Install PM2
 sudo npm install -g pm2
-
-# Clone repository
 git clone https://github.com/hamzadenizyilmaz/Creart-Node.JS-Whois-Software.git
 cd Creart-Node.JS-Whois-Software
-
-# Backend setup
 cd backend
 npm install --production
 pm2 start server.js --name "whois-backend"
-
-# Frontend setup
 cd ../frontend
 npm install --production
 npm run build
 ```
 
-**Nginx Configuration** (`/etc/nginx/sites-available/whois-app`):
+**Nginx Config** (`/etc/nginx/sites-available/whois-app`):
 ```nginx
-# Backend API
 server {
     listen 80;
     server_name api.yourdomain.com;
-
     location / {
-        proxy_pass http://localhost:5000;
+        proxy_pass http://localhost:3001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -255,37 +227,30 @@ server {
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_cache_bypass $http_upgrade;
     }
 }
 
-# Frontend
 server {
     listen 80;
     server_name yourdomain.com www.yourdomain.com;
-
     root /path/to/Creart-Node.JS-Whois-Software/frontend/out;
     index index.html;
-
     gzip on;
-    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
-
+    gzip_types text/plain text/css application/json application/javascript;
     location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg)$ {
         expires 1y;
         add_header Cache-Control "public, immutable";
     }
-
     location / {
         try_files $uri $uri/ /index.html;
     }
 }
 ```
 
-##### B) Docker Deployment
+##### B) Docker
 **`docker-compose.yml`**:
 ```yaml
 version: '3.8'
-
 services:
   backend:
     build: ./backend
@@ -302,7 +267,6 @@ services:
       - ./backend:/app
       - /app/node_modules
     restart: unless-stopped
-
   frontend:
     build: ./frontend
     ports:
@@ -312,7 +276,6 @@ services:
     depends_on:
       - backend
     restart: unless-stopped
-
   mongodb:
     image: mongo:6.0
     ports:
@@ -320,7 +283,6 @@ services:
     volumes:
       - mongodb_data:/data/db
     restart: unless-stopped
-
   redis:
     image: redis:7.2-alpine
     ports:
@@ -328,7 +290,6 @@ services:
     volumes:
       - redis_data:/data
     restart: unless-stopped
-
 volumes:
   mongodb_data:
   redis_data:
@@ -339,7 +300,7 @@ Run:
 docker-compose up -d
 ```
 
-##### C) Platform-as-a-Service
+##### C) PaaS
 - **Vercel (Frontend)**:
   ```bash
   cd frontend
@@ -356,19 +317,16 @@ docker-compose up -d
 ## 🔧 API Documentation
 
 ### Base URL
-- Development: `http://localhost:5000/api/v1`
+- Development: `http://localhost:3001/api/v1`
 - Production: `https://api.yourdomain.com/api/v1`
 
 ### Endpoints
 
 #### 🔍 WHOIS Lookup
 **POST** `/whois`
-- **Request Body**:
+- **Request**:
   ```json
-  {
-    "query": "example.com",
-    "type": "domain"
-  }
+  { "query": "example.com", "type": "domain" }
   ```
 - **Response**:
   ```json
@@ -382,38 +340,27 @@ docker-compose up -d
       "nameServers": ["ns1.example.com", "ns2.example.com"],
       "status": "clientTransferProhibited"
     },
-    "metadata": {
-      "responseTime": "245ms",
-      "cached": false,
-      "timestamp": "2025-10-22T02:02:00Z"
-    }
+    "metadata": { "responseTime": "245ms", "cached": false, "timestamp": "2025-10-22T02:10:00Z" }
   }
   ```
 
 #### 🌐 DNS Lookup
 **POST** `/dns`
-- **Request Body**:
+- **Request**:
   ```json
-  {
-    "domain": "example.com",
-    "recordType": "A"
-  }
+  { "domain": "example.com", "recordType": "A" }
   ```
 - **Response**:
   ```json
   {
     "success": true,
-    "data": {
-      "domain": "example.com",
-      "recordType": "A",
-      "records": ["93.184.216.34"]
-    }
+    "data": { "domain": "example.com", "recordType": "A", "records": ["93.184.216.34"] }
   }
   ```
 
 #### 📊 Batch Query
 **POST** `/whois/batch`
-- **Request Body**:
+- **Request**:
   ```json
   {
     "queries": [
@@ -425,122 +372,82 @@ docker-compose up -d
   ```
 - **Response**:
   ```json
-  {
-    "success": true,
-    "data": [
-      { "query": "example.com", "type": "domain", "result": {...} },
-      { "query": "8.8.8.8", "type": "ipv4", "result": {...} },
-      { "query": "AS15169", "type": "asn", "result": {...} }
-    ]
-  }
+  { "success": true, "data": [{ "query": "example.com", "type": "domain", "result": {...} }, ...] }
   ```
 
 #### ❤️ Health Check
 **GET** `/health`
 - **Response**:
   ```json
-  {
-    "status": "healthy",
-    "timestamp": "2025-10-22T02:02:00Z",
-    "uptime": 12345.67,
-    "version": "1.2.5-beta"
-  }
+  { "status": "healthy", "timestamp": "2025-10-22T02:10:00Z", "uptime": 12345.67, "version": "1.2.5-beta" }
   ```
 
-### Supported Query Types
-| Type     | Format            | Example                     | Description                     |
-|----------|-------------------|-----------------------------|---------------------------------|
-| `domain` | FQDN              | `example.com`               | Domain WHOIS information        |
-| `ipv4`   | IPv4 Address      | `8.8.8.8`                   | IPv4 address details            |
-| `ipv6`   | IPv6 Address      | `2001:4860:4860::8888`      | IPv6 address details            |
-| `asn`    | AS Number         | `AS15169` or `15169`        | Autonomous System information   |
-| `cidr`   | CIDR Notation     | `192.168.1.0/24`            | CIDR block information          |
+### Query Types
+| Type     | Format         | Example                  | Description                    |
+|----------|----------------|--------------------------|--------------------------------|
+| `domain` | FQDN           | `example.com`            | Domain WHOIS info             |
+| `ipv4`   | IPv4 Address   | `8.8.8.8`                | IPv4 details                  |
+| `ipv6`   | IPv6 Address   | `2001:4860:4860::8888`   | IPv6 details                  |
+| `asn`    | AS Number      | `AS15169` or `15169`     | ASN info                      |
+| `cidr`   | CIDR Notation  | `192.168.1.0/24`         | CIDR block info               |
 
 ## 🎨 Customization
 
-### Theme Customization
+### Theme
 Edit `frontend/tailwind.config.js`:
 ```javascript
 module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          500: '#your-custom-color',
-        },
-      },
-    },
-  },
+  theme: { extend: { colors: { primary: { 500: '#your-custom-color' } } } }
 };
 ```
 
 ### Branding
-Update the logo and app name in `frontend/components/Layout/Header.js`:
+Update `frontend/components/Layout/Header.js`:
 ```javascript
-// Customize logo and site title
-const Header = () => {
-  return (
-    <header>
-      <img src="/path/to/your-logo.png" alt="Creart-Whois" />
-      <h1>Your Custom App Name</h1>
-    </header>
-  );
-};
+const Header = () => (
+  <header>
+    <img src="/path/to/your-logo.png" alt="Creart-Whois" />
+    <h1>Your Custom App Name</h1>
+  </header>
+);
 ```
 
-### Adding New Query Types
-1. Update `backend/config/constants.js` to include the new query type in `SUPPORTED_QUERY_TYPES`.
-2. Add a parser in `backend/utils/whoisParser.js` for the new type.
-3. Update the frontend UI in `frontend/components/Search/QueryTypes.js`.
+### New Query Types
+1. Add to `backend/config/constants.js` (`SUPPORTED_QUERY_TYPES`).
+2. Create parser in `backend/utils/whoisParser.js`.
+3. Update UI in `frontend/components/Search/QueryTypes.js`.
 
-## 🔒 Security Features
-- **Rate Limiting**: Configurable per-IP limits for WHOIS and API requests.
-- **CORS**: Restrict access to trusted domains only.
-- **Input Validation**: Joi schemas for all API inputs to prevent injection attacks.
-- **Helmet**: Security headers to protect against common vulnerabilities.
-- **XSS Protection**: Input sanitization using libraries like `sanitize-html`.
-- **SQL Injection Protection**: Parameterized queries for database interactions (if applicable).
+## 🔒 Security
+- **Rate Limiting**: Per-IP query limits.
+- **CORS**: Trusted domains only.
+- **Input Validation**: Joi schemas.
+- **Helmet**: Security headers.
+- **XSS/SQL Protection**: Sanitization and parameterized queries.
 
-## 📊 Performance Optimizations
-
-### Backend
-- **Caching**: 5-minute TTL for WHOIS results using Redis or node-cache.
-- **Compression**: Gzip/Brotli for reduced response sizes.
-- **Connection Pooling**: Optimized database connections for high throughput.
-- **Cluster Mode**: Multi-process support for scalability.
-
-### Frontend
-- **SSR/SSG**: Next.js server-side rendering and static site generation for fast page loads.
-- **Image Optimization**: Using Next.js `Image` component for efficient asset delivery.
-- **Code Splitting**: Dynamic imports to reduce bundle size.
-- **CDN Support**: Ready for static asset distribution via CDNs.
+## 📊 Performance
+- **Backend**: 5-min cache, Gzip/Brotli, connection pooling, cluster mode.
+- **Frontend**: SSR/SSG, image optimization, code splitting, CDN-ready.
 
 ## 🐛 Troubleshooting
 
-### Common Issues
-1. **Backend Fails to Start**:
+### Issues
+1. **Backend Failure**:
    ```bash
-   netstat -tulpn | grep :5000
+   netstat -tulpn | grep :3001
    pkill -f node
    cd backend && npm start
    ```
-
 2. **CORS Errors**:
    Check `backend/.env`:
    ```env
-   ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+   FRONTEND_URL=http://localhost:3000
    ```
-
-3. **WHOIS Query Timeouts**:
-   Update `backend/utils/whoisParser.js`:
+3. **Timeouts**:
+   Edit `backend/utils/whoisParser.js`:
    ```javascript
-   const WHOIS_CONFIG = {
-     timeout: 30000, // Increase to 30 seconds
-     retries: 3,     // Retry up to 3 times
-   };
+   const WHOIS_CONFIG = { timeout: 30000, retries: 3 };
    ```
-
-4. **High Memory Usage**:
+4. **Memory Usage**:
    ```bash
    pm2 start server.js --name "whois-backend" --max-memory-restart 512M
    ```
@@ -549,117 +456,85 @@ const Header = () => {
 - **Backend**:
   ```bash
   cd backend && npm run dev
-  # Production logs
   pm2 logs whois-backend
-  tail -f ~/.pm2/logs/whois-backend-out.log
   ```
 - **Frontend**:
-  Check browser console (`F12 > Console`) or build logs:
   ```bash
   cd frontend && npm run build
+  # Check browser console (F12)
   ```
 
 ## 🤝 Contributing
 
-We welcome contributions to make Creart-Whois even better! Here's how to get started:
-
-1. **Fork and Clone**:
+1. **Fork & Clone**:
    ```bash
    git clone https://github.com/your-username/Creart-Node.JS-Whois-Software.git
-   cd Creart-Node.JS-Whois-Software
    ```
-
-2. **Create a Feature Branch**:
+2. **Branch**:
    ```bash
    git checkout -b feature/your-feature
    ```
-
-3. **Make Changes and Commit**:
+3. **Commit**:
    ```bash
    git add .
-   git commit -m "feat: add your feature description"
+   git commit -m "feat: your feature description"
    ```
-
-4. **Push and Create a Pull Request**:
+4. **Push & PR**:
    ```bash
    git push origin feature/your-feature
    ```
 
-### Coding Standards
-- **ESLint**: Follow Airbnb style guide.
-- **Prettier**: Auto-format code for consistency.
-- **Commit Messages**: Use conventional commits (e.g., `feat:`, `fix:`, `docs:`).
-- **Testing**: Write Jest tests for new features.
+### Standards
+- **ESLint**: Airbnb style.
+- **Prettier**: Code formatting.
+- **Commits**: Conventional (e.g., `feat:`, `fix:`).
+- **Tests**: Jest.
 
-### Running Tests
+### Testing
 ```bash
-# Backend tests
 cd backend && npm test
-
-# Frontend tests
 cd frontend && npm test
-
-# End-to-end tests
 npm run test:e2e
 ```
 
-## 📈 Monitoring and Analytics
+## 📈 Monitoring
+- **Health**:
+  ```bash
+  curl http://localhost:3001/health
+  ```
+- **Metrics**:
+  ```bash
+  curl http://localhost:3001/api/v1/stats
+  ```
 
-### Health Monitoring
-```bash
-curl http://localhost:5000/health
-curl http://localhost:5000/health/detailed
-```
+## 🔄 Maintenance
+- **Updates**:
+  ```bash
+  cd backend && npm update
+  cd frontend && npm update
+  npm audit fix
+  ```
+- **Backup**:
+  ```bash
+  mongodump --uri="mongodb://localhost:27017/whois" --out=./backup/
+  cp .env .env.backup
+  git tag v1.2.5-beta-backup
+  git push --tags
+  ```
 
-### Performance Metrics
-```bash
-curl http://localhost:5000/api/v1/stats
-curl http://localhost:5000/api/v1/cache/stats
-```
-
-## 🔄 Updates and Maintenance
-
-### Dependency Updates
-```bash
-cd backend && npm update
-cd frontend && npm update
-npm audit
-npm audit fix
-```
-
-### Backup and Recovery
-```bash
-# Database backup (if used)
-mongodump --uri="mongodb://localhost:27017/whois" --out=./backup/
-
-# Environment backup
-cp .env .env.backup
-
-# Code backup
-git tag v1.2.5-beta-backup
-git push --tags
-```
-
-## 📞 Support and Community
-
-- **GitHub Issues**: [Report Bugs](https://github.com/hamzadenizyilmaz/Creart-Node.JS-Whois-Software/issues)
-- **Email**: [support@yourdomain.com](mailto:support@yourdomain.com)
-- **Discord**: [Join our Community](https://discord.gg/your-invite-link)
+## 📞 Support
+- **GitHub**: [Issues](https://github.com/hamzadenizyilmaz/Creart-Node.JS-Whois-Software/issues)
+- **Email**: [hamza@creartcloud.com](mailto:hamza@creartcloud.com)
 
 ## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+[MIT License](LICENSE)
 
 ## 🙏 Acknowledgments
-
-- **WHOIS Protocol**: Thanks to the Internet Systems Consortium.
-- **Node.js Community**: For a robust ecosystem.
-- **Next.js Team**: For an exceptional React framework.
-- **Tailwind CSS**: For a utility-first CSS framework.
-- **Framer Motion**: For smooth and delightful animations.
+- WHOIS Protocol (ISC)
+- Node.js, Next.js, Tailwind CSS, Framer Motion
 
 ---
 
-**⭐ Star us on [GitHub](https://github.com/hamzadenizyilmaz/Creart-Node.JS-Whois-Software) if you find this project useful!**
+**⭐ Star us on [GitHub](https://github.com/hamzadenizyilmaz/Creart-Node.JS-Whois-Software)!**
 
-**Creart-Whois** is your go-to solution for modern WHOIS lookups. Join us in building the future of network querying! 🚀
+Join us to build the future of WHOIS lookups! 🚀
